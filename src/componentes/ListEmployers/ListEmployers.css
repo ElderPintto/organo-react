@@ -1,0 +1,75 @@
+.list-employers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    mix-blend-mode: lighten;
+    min-height: 400px;
+    padding: 2rem;}
+
+
+
+.list-employers span.programacao,
+.list-employers span.front,
+.list-employers span.data,
+.list-employers span.devops,
+.list-employers span.ux,
+.list-employers span.mobile,
+.list-employers span.inovacao {
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 0;
+}
+
+.list-employers div ,
+.list-employers h4 {
+    z-index: 1;
+}
+
+.list-employers .programacao {
+    background-color: #57C278;
+}
+
+.list-employers .front {
+    background-color: #82C3EC;
+}
+
+.list-employers .data {
+    background-color: #A68CC8;
+}
+
+.list-employers .devops {
+    background-color: #E06B69;
+}
+
+.list-employers .ux {
+    background-color: #DBDB8D;
+}
+
+.list-employers .mobile {
+    background-color: #FFBA05;
+}
+
+.list-employers .inovacao {
+    background-color: #FFBA05;
+}
+
+.list-employers h4 {
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+}
+
+.list-employers::before {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: #c7c7c7;
+    order: 1;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}

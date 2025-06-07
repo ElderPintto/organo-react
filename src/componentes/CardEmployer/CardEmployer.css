@@ -1,0 +1,60 @@
+.card-employer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 5rem 1rem 1rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    min-width: 260px;
+    
+}
+
+.card-employer.programacao {
+    background: linear-gradient(to bottom, #57C278 0% 37%, #fff  35% 100%);
+}
+
+.card-employer.front {
+    background: linear-gradient(to bottom, #82C3EC 0% 37%, #fff  35% 100%);
+}
+
+.card-employer.data {
+    background: linear-gradient(to bottom, #A68CC8 0% 37%, #fff  35% 100%);
+}
+
+.card-employer.devops {
+    background: linear-gradient(to bottom, #E06B69 0% 37%, #fff  35% 100%);
+}
+
+.card-employer.ux {
+    background: linear-gradient(to bottom, #DBDB8D 0% 37%, #fff  35% 100%);
+}
+
+.card-employer.mobile {
+    background: linear-gradient(to bottom, #FFBA05 0% 37%, #fff  35% 100%);
+}
+
+.card-employer.inovacao {
+    background: linear-gradient(to bottom, #FFBA05 0% 37%, #fff  35% 100%);
+}
+
+.card-employer.card-employer:hover {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-employer img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.card-employer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.card-employer h4 {
+    font-size: 1rem;
+    color: #888;
+}   
