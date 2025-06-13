@@ -5,6 +5,7 @@ import InputText from '../InputText';
 import InputSelect from '../InputSelect';
 import Btn from '../Btn';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 function Form(props) {
 
@@ -15,8 +16,9 @@ const [time, setTime] = useState('')
 
 
  const onSubmit = (event) => {
+    
     event.preventDefault()
-    props.onEmployerCreated({nome, cargo, imagem, time})
+    props.onEmployerCreated({nome, cargo, imagem, time, id:uuidv4()})
     setValue('')
     setCargo('')
     setImagem('')
@@ -29,7 +31,12 @@ const [time, setTime] = useState('')
           <InputText value={nome} setInputValue={setValue} isRequired  label="Nome" placeholder="Digite seu nome" />
           <InputText value={cargo} setInputValue={setCargo}  isRequired label="Cargo" placeholder="Digite seu cargo" />
           <InputText value={imagem} setInputValue={setImagem} isRequired label="Imagem" placeholder="Digite o endereço da imagem" />
-          <InputSelect value={time} setInputValue={setTime}  isRequired label="Time" placeholder="Selecione uma opção"  options={[{ label: '', value: '' },{ label: 'Programação', value: 'programacao' }, { label: 'Front-End', value: 'front' }, { label: 'Data Science', value: 'data' }, { label: 'Devops', value: 'devops' }]}/>
+          <InputSelect value={time} setInputValue={setTime}  isRequired label="Time" placeholder="Selecione uma opção"  options={props.times}/>
+           <div>    
+                <p> 
+                    <span   > Não tem o time que vc quer ?</span> <strong onClick={() => props.setOpenModal() }> Criar novo time </strong>
+                </p>
+           </div>
           <Btn>Criar Card</Btn>
       </form>
   );
