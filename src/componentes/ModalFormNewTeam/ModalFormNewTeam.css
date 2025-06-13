@@ -1,0 +1,15 @@
+dialog {
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 1;
+    position: relative;
+    transform: translate(00%, -115%);
+}
+
+
+dialog::backdrop {
+  background: red;
+}

@@ -8,6 +8,7 @@
     border-radius: 8px;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     min-width: 260px;
+    position: relative;
     
 }
 
@@ -57,4 +58,11 @@
 .card-employer h4 {
     font-size: 1rem;
     color: #888;
-}   
+}
+
+.icon-delete {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
